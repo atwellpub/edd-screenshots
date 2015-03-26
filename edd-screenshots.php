@@ -66,9 +66,7 @@ if (!class_exists('EDD_Screenshots') && class_exists('Easy_Digital_Downloads') )
 		*/
 		public static function enqueue_admin_scripts() {	
 			wp_enqueue_script("jquery");
-			wp_dequeue_script('jquery-cookie');
-			wp_enqueue_script('jquery-cookie', EDD_SCREENSHOTS_URLPATH . 'js/jquery.cookie.js');
-			wp_enqueue_script('edd-admin-js', EDD_SCREENSHOTS_URLPATH . 'js/admin.js');
+			wp_enqueue_script('edd-screenshots-admin', EDD_SCREENSHOTS_URLPATH . 'assets/js/admin.js');
 		}
 		
 		/**
@@ -79,13 +77,13 @@ if (!class_exists('EDD_Screenshots') && class_exists('Easy_Digital_Downloads') )
 			wp_enqueue_script("jquery");	
 
 			wp_dequeue_script('jquery-prettyphoto');
-			wp_enqueue_script('jquery-prettyphoto', EDD_SCREENSHOTS_URLPATH . 'js/jquery-photo-gallery/jquery.prettyPhoto.js');
+			wp_enqueue_script('jquery-prettyphoto', EDD_SCREENSHOTS_URLPATH . 'assets/js/jquery-photo-gallery/jquery.prettyPhoto.js');
 			
-			wp_enqueue_script('edd-js-frontend', EDD_SCREENSHOTS_URLPATH . 'js/frontend.js');
+			wp_enqueue_script('edd-screenshots-frontend', EDD_SCREENSHOTS_URLPATH . 'assets/js/frontend.js');
 			
 			wp_dequeue_script('css-prettyphoto');
-			wp_enqueue_style('css-prettyphoto', EDD_SCREENSHOTS_URLPATH . 'js/jquery-photo-gallery/css/prettyPhoto.css');
-			wp_enqueue_style('edd-css-frontend', EDD_SCREENSHOTS_URLPATH . 'css/styles.css');
+			wp_enqueue_style('css-prettyphoto', EDD_SCREENSHOTS_URLPATH . 'assets/js/jquery-photo-gallery/css/prettyPhoto.css');
+			wp_enqueue_style('edd-css-frontend', EDD_SCREENSHOTS_URLPATH . 'assets/css/styles.css');
 			
 		}
 		
@@ -169,7 +167,7 @@ if (!class_exists('EDD_Screenshots') && class_exists('Easy_Digital_Downloads') )
 			}
 			
 			echo "</div>"; 
-			echo "<div style='text-align:right;'><img src='".EDD_SCREENSHOTS_URLPATH."img/add.png' title='add screenshot' style='cursor:pointer' id='edd-add-screenshot'></div>";
+			echo "<div style='text-align:right;'><img src='".EDD_SCREENSHOTS_URLPATH."assets/images/add.png' title='add screenshot' style='cursor:pointer' id='edd-add-screenshot'></div>";
 		
 			
 			
