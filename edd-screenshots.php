@@ -1,7 +1,7 @@
 <?php 
 /**
  * Plugin Name: Easy Digital Downloads - Screenshots
- * Version: 2.0.1
+ * Version: 2.0.2
  * Plugin URI: http://www.hudsonatwell.co
  * Description: Adds screenshots metabox to Downloads custom post type meta area. Screenshots are displayed under download description if enabled. Use &lt;?php edd_add_screenshots(); ?&gt; in your template files or [edd-screenshots] in your post content to render screenshots block.
  * Author:  Hudson Atwell (@atwellpub)
@@ -29,7 +29,7 @@ if (!class_exists('EDD_Screenshots') && class_exists('Easy_Digital_Downloads') )
 		*  Define Constants
 		*/
 		public static function define_constants() {
-			define('EDD_SCREENSHOTS_CURRENT_VERSION', '2.0.1' );
+			define('EDD_SCREENSHOTS_CURRENT_VERSION', '2.0.2' );
 			define('EDD_SCREENSHOTS_URLPATH', WP_PLUGIN_URL.'/'.plugin_basename( dirname(__FILE__) ).'/' );
 			define('EDD_SCREENSHOTS_PATH', ABSPATH.'wp-content/plugins/'.plugin_basename( dirname(__FILE__) ).'/' );
 			define('EDD_SCREENSHOTS_PLUGIN_SLUG', 'edd-screenshots' );
