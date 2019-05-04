@@ -30,16 +30,31 @@ jQuery(document).ready(function ($) {
 		var count = jQuery("#edd-screenshots-count").val();
 		//alert(count);
 		var nid = parseInt(count) + 1;
-		var html = '<hr><h2>Screenshot '+nid+'</h2>'
-				+ '<h4 for="upload_image">Screenshot URL</h4>'
-				+ '<input name="edd_screenshots['+count+']"  id="edd_screenshots_'+count+'" type="text" size="82" value="" />'
-				+ '<input id="upload_image_button" class="edd_screenshots_'+count+'"  type="button" value="Upload Image" />'
-				+ '<h4>Primary Caption</h4>'
-				+ '<input name="edd_screenshots_captions_primary['+count+']"  id="edd_screenshots_primary_label_0" type="text" style="width:100%;" value="" />'
-				+ '<h4>Secondary Caption</h4>'
-				+ '<input name="edd_screenshots_captions_secondary['+count+']"  id="edd_screenshots_secondary_label_0" type="text" style="width:100%;" value="" />'
+		var html = '<div style="margin-left:4px;margin-top:10px;">#'
+				+ nid
+				+ '</div>'
+				+ '<table>'
+				+ '<tr>'
+				+ '		<td style="min-width:150px;">'
+				+ '		Screenshot URL'
+				+ ' 	</td>'
+				+ '		<td>'
+				+ '			<input name="edd_screenshots['+count+']"  id="edd_screenshots_'+count+'" type="text" style="width:60%;min-width: 445px;"  value="" />'
+				+ '			<input id="upload_image_button" class="edd_screenshots_'+count+'"  type="button" value="Upload Image" />'
+				+ '		</td>'
+				+ '</tr>'
+				+ '<tr>'
+				+ '		<td>'
+				+ '			Caption'
+				+ '		</td>'
+				+ '		<td>'
+				+ '			<input name="edd_screenshots_captions_primary['+count+']"  id="edd_screenshots_primary_label_0" type="text" style="width:100%;" value="" />'
+				+ '		</td>'
+				+ '	</tr>'
+				+ '</table>'
+				+ '<hr>'
 				+ '<br><br>';
-			
+
 		jQuery('#edd-screenshots-container').append(html);
 		jQuery("#edd-screenshots-count").val(nid);
 	});
